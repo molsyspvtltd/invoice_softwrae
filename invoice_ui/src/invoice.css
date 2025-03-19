@@ -1,0 +1,447 @@
+/* General Styling */
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background: url("C:/Users/ADITHYA/Downloads/Flux_Dev_generate_a_highly_detailed_and_magnified_image_of_a_s_0.jpeg") no-repeat center;
+    background-size: cover;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Floating Background Animation - Increased Speed */
+@keyframes floatBackground {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.floating-element {
+    animation: floatBackground *0.8s* ease-in-out infinite; /* Faster speed */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(8px);
+    animation: floatBackground 6s infinite ease-in-out;
+    z-index: -1;
+}
+
+/* General Text and Headings */
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    transition: 0.3s;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #1e7e34;
+}
+
+/* Inputs and Textareas */
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+textarea {
+    min-height: 60px;
+    resize: vertical;
+}
+
+/* Highlighting Sections on Click */
+div:focus-within {
+    outline: 2px solid #28a745;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Invoice, Quotation, and Purchase Order Containers */
+.invoice-container, .quotation-container, .purchase-order-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: 85vh;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background: #28a745;
+    color: white;
+}
+
+/* Invoice Header & Summary */
+.invoice-header, .invoice-summary, .purchase-order-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.invoice-header div, .invoice-summary div, .purchase-order-header div {
+    flex: 1;
+    min-width: 150px;
+}
+
+/* Making Sections Clickable and Highlighted on Hover */
+div:hover {
+    transition: 0.3s;
+    background-color: rgba(40, 167, 69, 0.1);
+}
+
+/* Login Page */
+.login-box {
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    width: 50%;
+    min-width: 400px;
+    transition: transform 0.3s;
+}
+
+.login-box:hover {
+    transform: scale(1.02);
+}
+
+.login-box input {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    margin: 20px 0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 24px;
+}
+
+.login-box button {
+    background-color: #28a745;
+    color: white;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 26px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.login-box button:hover {
+    background-color: #1e7e34;
+}
+.password-strength {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .password-strength.Poor {
+    color: red;
+  }
+  
+  .password-strength.Fair {
+    color: orange;
+  }
+  
+  .password-strength.Strong {
+    color: green;
+  }
+  
+/* Welcome Page */
+.welcome {
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #28a745, #1e7e34);
+    font-size: 55px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Home Page */
+.home {
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Invoice Title */
+.invoice-title {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #28a745;
+    padding-bottom: 12px;
+}
+
+/* Invoice Table */
+.invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.invoice-table th, .invoice-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.invoice-table th {
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+}
+
+.invoice-table input {
+    border: none;
+    background: transparent;
+    font-size: 18px;
+}
+
+/* Action Buttons */
+.invoice button {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(135deg, #28a745, #1e7e34);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-transform: uppercase;
+}
+
+.invoice button:hover {
+    background: linear-gradient(135deg, #1e7e34, #155d27);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .login-box {
+        width: 60%;
+    }
+
+    .invoice-container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .login-box {
+        width: 75%;
+    }
+
+    .invoice-container {
+        width: 95%;
+    }
+
+    .home, .invoice {
+        font-size: 30px;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .login-box {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .invoice-container {
+        width: 100%;
+    }
+
+    select, button {
+        font-size: 20px;
+        padding: 15px;
+    }
+}
+/* General Styling */
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background: url("C:/Users/ADITHYA/Downloads/Flux_Dev_generate_a_highly_detailed_and_magnified_image_of_a_s_0.jpeg") no-repeat center;
+    background-size: cover;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Adjustments for Proper Alignment and Spacing */
+input, textarea, select {
+    width: calc(100% - 20px); /* Ensuring enough spacing inside containers */
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Fixing merged fields on pages 3, 4, 5 */
+.page-3 .date-field,
+.page-3 .reference-field,
+.page-4 .date-field,
+.page-4 .po-number-field,
+.page-5 .date-field,
+.page-5 .po-number-field {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.date-field input,
+.reference-field input,
+.po-number-field input {
+    flex: 1;
+    min-width: 150px;
+}
+
+/* Expanding Containers for Better Space */
+.invoice-container, 
+.quotation-container, 
+.purchase-order-container {
+    width: 95%;
+    max-width: 900px; /* Increased width for better spacing */
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-height: 85vh;
+    overflow-y: auto;
+    overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+/* Ensure table responsiveness inside the containers */
+table {
+    width: 100%;
+    min-width: 800px; /* Prevents table elements from merging */
+    border-collapse: collapse;
+    margin-top: 15px;
+    overflow-x: auto;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Align Bottom Details Correctly */
+.invoice-summary, .purchase-order-summary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.invoice-summary div, 
+.purchase-order-summary div {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Make the Entire Page Scrollable if Needed */
+@media screen and (max-width: 1024px) {
+    .invoice-container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .invoice-container {
+        width: 95%;
+    }
+
+    .invoice-summary,
+    .purchase-order-summary {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .date-field,
+    .reference-field,
+    .po-number-field {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .invoice-container {
+        width: 100%;
+    }
+
+    select, button {
+        font-size: 18px;
+        padding: 12px;
+    }
+}
+
