@@ -32,7 +32,9 @@ public class SecurityConfig {
                 .csrf().disable()
                 .authorizeHttpRequests()
                 .requestMatchers("/auth/login", "/auth/register").permitAll()  // Allow public access
-                .requestMatchers("/api/document/**").authenticated()  // Secure document API
+                .requestMatchers("/api/purchase-order/**").authenticated()  // Secure document API
+                .requestMatchers("/api/quotation/**").authenticated()
+                .requestMatchers("/api/invoice/**").authenticated()
                 .anyRequest().authenticated()
                 .and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)

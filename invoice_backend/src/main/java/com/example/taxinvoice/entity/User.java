@@ -15,6 +15,9 @@ public class User {
     @Column(nullable = false)
     private String password;
 
+    @Column(nullable = false)  // Ensuring designation is always provided
+    private String designation;
+
     // Getters and Setters
 
     public Long getId() {
@@ -39,5 +42,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getDesignation() {
+        return designation;
+    }
+
+    public void setDesignation(String designation) {
+        this.designation = designation;
     }
 }
